@@ -1,0 +1,23 @@
+html, body * { box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+.navbar{
+	 background:
+    linear-gradient(
+    rgba(35,43,85,0.75),
+    rgba(35,43,85,0.95));
+}
+
+footer{
+
+	margin-top: 20px;
+	padding-top: 20px;
+}
+.bg__card__navbar{
+	background-color: #000000;
+}
+.bg__card__footer{
+	background-color: #000000 !important;
+}
+#add__new__list{
+    top: -38px;
+    right: 0px;
+}

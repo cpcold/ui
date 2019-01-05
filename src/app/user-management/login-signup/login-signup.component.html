@@ -1,0 +1,78 @@
+
+<html>
+<head>
+	<title>Sign In</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="frame">
+    <div class="nav">
+      <ul class="links">
+        <li class="signin-active"><a class="btn">Sign in</a></li>
+        <li class="signup-inactive"><a class="btn">Sign up </a></li>
+      </ul>
+    </div>
+    <div ng-app ng-init="checked = false">
+				 <form class="form-signin" (submit)="onLogin(loginForm)" #loginForm="ngForm">
+            <mat-form-field>
+          <label for="username">Username</label>
+          <input class="form-styling" name="email" ngModel   #emailInput="ngModel" type="email" required/>
+          <input matInput class="form-styling" name="test"*ngIf="test" ngModel   #testInput="ngModel" type="email"/>
+          <label for="password">Password</label>
+          <input  class="form-styling"name="password" type="password" ngModel   #passwordInput="ngModel" required/>
+          <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
+        </mat-form-field>
+          <div class="btn-animate">
+        
+            <button class="btn-signin" type="submit">Sign in</button>
+          </div>
+         </form>
+        
+				   <form class="form-signup"  (submit)="onSignup(signupForm)" #signupForm="ngForm">
+          <label for="name">Name</label>
+          <input class="form-styling" name="name" ngModel #nameInput="ngModel" type="text"  placeholder="" required/>
+          <label for="email">Email</label>
+          <input class="form-styling" name="email" ngModel #emailInput="ngModel" type="text"  placeholder="" required/>
+          <label for="gender" >Gender</label>
+            <select name="gender" ngModel #genderInput="ngModel" required>
+           
+    			 <option value="male">male</option>
+    			 <option value="female">female</option>
+ 			    </select><br><br>
+          <label for="contact">Contact</label>
+          <input class="form-styling" name="contact" ngModel #contactInput="ngModel"type="text"  placeholder="" required/>
+          <label for="password">Password</label>
+          <input class="form-styling" name="password" ngModel #passwordInput="ngModel"type="password"  placeholder="" required/> 
+          <label for="confirmpassword">Confirm password</label>
+          <input class="form-styling" type="password" name="confirmpassword" placeholder="" required/>
+          <button ng-click="checked = !checked" class="btn-signup" type="submit">Sign Up</button>
+				   </form>
+      
+            <div  class="success">
+              <svg width="270" height="270" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 60 60" id="check" ng-class="checked ? 'checked' : ''">
+                 <path fill="#ffffff" d="M40.61,23.03L26.67,36.97L13.495,23.788c-1.146-1.147-1.359-2.936-0.504-4.314
+                  c3.894-6.28,11.169-10.243,19.283-9.348c9.258,1.021,16.694,8.542,17.622,17.81c1.232,12.295-8.683,22.607-20.849,22.042
+                  c-9.9-0.46-18.128-8.344-18.972-18.218c-0.292-3.416,0.276-6.673,1.51-9.578" /></svg>
+                <div class="successtext">
+                   <p> Thanks for signing up! Check your email for confirmation.</p>
+                </div>
+             </div>
+      </div>
+      
+      <div class="forgot">
+        <a href="#">Forgot your password?</a>
+      </div>
+      
+     
+  </div>
+</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display</title>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<br>
+<header>
+  <div class="container ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+      <a class="navbar-brand" href="#" style="color:#ffffff;">ToDO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#" style="color:#ffffff;">Name <span class="sr-only">(current)</span></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!---->
+<main>
+<div class="container my-5">
+       <div class="card-body text-center">
+    <h4 class="card-title">ToDo List</h4>
+     </div>
+    <div class="card">
+        <a routerLink="/addtasks" id="add__new__list" type="button" class="btn btn-success position-absolute" ><i class="fas fa-plus"></i> Add Task</a>
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">EmailId</th>
+                <th scope="col">Date</th>
+                <th scope="col">Task</th>
+                <th scope="col">Edit Task </th>
+                <th scope="col">list info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>
+                    <a class="btn btn-sm btn-primary" href="#"><i class="far fa-edit"></i> edit</a>
+                    <a class="btn btn-sm btn-danger" href="#"><i class="fas fa-trash-alt"></i> delete</a>    
+                </td>
+                <td><a class="btn btn-sm btn-info" href="#"><i class="fas fa-info-circle"></i> Details</a> </td>
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
+    <!-- Large modal -->
+
+</div>
+</main>
+
+
+</body>
+</html>
+<router-outlet></router-outlet>
