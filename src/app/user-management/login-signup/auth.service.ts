@@ -28,9 +28,9 @@ export class AuthService {
 
   createUser(name:string,gender:string,contact:number,email: string, password: string) {
     const authData = { name: name, gender:gender, contact:contact, email: email, password: password };
-   console.log(authData);
+ 
     this.http
-      .post("http://localhost:3333/api/rest/v1/todo/user/signup", authData)
+      .post("https://todo-rawengg.herokuapp.com/api/rest/v1/todo/user/signup", authData)
       .subscribe(response => {
         console.log(response);
       });
@@ -40,7 +40,7 @@ export class AuthService {
     const authData = { email: email, password: password };
     this.http
       .post<{ token: string; expiresIn: number }>(
-        "http://localhost:3333/api/rest/v1/todo/user/login",
+        "https://todo-rawengg.herokuapp.com/api/rest/v1/todo/user/login",
         authData
       )
       .subscribe(response => {

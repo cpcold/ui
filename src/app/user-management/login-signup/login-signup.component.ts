@@ -7,7 +7,7 @@ import { AuthService } from "./auth.service";
   styleUrls: ['./login-signup.component.css']
 })
 export class LoginSignupComponent implements OnInit {
-  public test = false;
+
   constructor(public authService: AuthService) {}
 
   ngOnInit() {
